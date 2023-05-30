@@ -21,7 +21,7 @@ jobs:
         uses: brandedoutcast/publish-nuget@v2
         with:
           # Filepath of the project to be packaged, relative to root of repository
-          PROJECT_FILE_PATH: NLog.Targets.LogicMonitor/NLog.Targets.LogicMonitor.csproj
+          PROJECT_FILE_PATH: ./NLog.Targets.LogicMonitor/NLog.Targets.LogicMonitor.csproj
 
           # Configuration to build and package
           BUILD_CONFIGURATION: Release
@@ -30,7 +30,7 @@ jobs:
           # BUILD_PLATFORM: x64
 
           # NuGet package id, used for version detection & defaults to project name
-           PACKAGE_NAME: NLog.Targets.LogicMonitor
+          PACKAGE_NAME: NLog.Targets.LogicMonitor
 
           # Filepath with version info, relative to root of repository & defaults to PROJECT_FILE_PATH
           # VERSION_FILE_PATH: Directory.Build.props
@@ -51,7 +51,7 @@ jobs:
           NUGET_KEY: ${{secrets.GitKey}}
 
           # NuGet server uri hosting the packages, defaults to https://api.nuget.org
-           NUGET_SOURCE: https://nuget.pkg.github.com/AakashKhopade/index.json
+          NUGET_SOURCE: https://nuget.pkg.github.com/AakashKhopade/index.json
 
           # Flag to toggle pushing symbols along with nuget package to the server, disabled by default
           # INCLUDE_SYMBOLS: false
